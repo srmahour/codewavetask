@@ -16,7 +16,9 @@ export default {
         600:'#191920',
         700:'#131319',
       },
-      secondary:'#4A96FF'
+      secondary:'#4A96FF',
+      transparent: 'transparent',
+      white:'white'
     },
     fontFamily: {
       sans: ["Inter var, sans-serif",],
