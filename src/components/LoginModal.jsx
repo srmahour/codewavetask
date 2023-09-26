@@ -21,8 +21,7 @@ export default function LoginModal(){
                     <p className="block text-sm leading-[17px] text-primary-200 font-normal w-full">Not registered yet? <a href="#" className='text-primary-100'> Register →</a> </p>
                 </form>
             </div>
-            <div className="backdrop bg-primary-700 opacity-10 absolute h-full w-full z-20"></div>
-            
+            <div className="backdrop-blur-[2px] absolute h-full w-full z-20 bg-opacity-50 bg-black"></div>
         </div>
 
     )

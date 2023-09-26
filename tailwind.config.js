@@ -18,7 +18,8 @@ export default {
       },
       secondary:'#4A96FF',
       transparent: 'transparent',
-      white:'white'
+      white:'white',
+      black:'black'
     },
     fontFamily: {
       sans: ["Inter var, sans-serif",],
