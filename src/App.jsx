@@ -1,10 +1,10 @@
-import SignUpModal from "./components/SignUpModal"
+import Home from "./pages/Home"
 
 function App() {
 
   return (
     <>
-      <SignUpModal/>
+      <Home/>
     </>
   )
 }
