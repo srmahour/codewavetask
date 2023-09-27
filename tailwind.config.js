@@ -5,7 +5,24 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      keyframes: {
+        fadeIn: {
+          '0%': { opacity:'0' },
+          '50%': { opacity: '0.5' },
+          '100%': { opacity: '1' },
+        },
+        fadeOut: {
+          '0%': { opacity:'1' },
+          '50%': { opacity: '0.5' },
+          '100%': { opacity: '0' },
+        }
+      },
+      animation: {
+        'fadeIn': 'fadeIn 0.3s linear 1',
+        'fadeOut': 'fadeOut 0.3s linear 1',
+      }
+    },
     colors:{
       primary:{
         100:'#C5C7CA',

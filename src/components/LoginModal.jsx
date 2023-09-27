@@ -24,7 +24,7 @@ export default function LoginModal({preventClose = false, backdrop = true, stati
 
     return(
         <>  
-            <div className={`max-w-[463px] w-fill h-[420px] bottom-0 left-0 top-0 right-0 m-auto z-30 card-bg rounded-lg p-6 border-2 border-solid border-transparent ${staticModal ? 'relative' : 'absolute'}  ${show ? 'block': 'hidden'}`}>
+            <div className={`max-w-[463px] animate-fadeIn w-fill h-[420px] bottom-0 left-0 top-0 right-0 m-auto z-30 card-bg rounded-lg p-6 border-2 border-solid anim border-transparent ${staticModal ? 'relative' : 'fixed'}  ${show ? 'block': 'hidden'}`}>
                 <button type="button" onClick={loginAction} className={`right-5 top-7 absolute h-8 w-8 bg-primary-700 rounded-full ${preventClose ? 'hidden' : ''} `}> <span className="h-3 w-[1.25px] bg-white block absolute top-0 bottom-0 left-0 right-0 m-auto -rotate-45"></span> <span className="h-3 w-[1.25px] bg-white block absolute top-0 bottom-0 left-0 right-0 m-auto rotate-45"></span></button>
                 <h4 className=" text-primary-300 uppercase text-center text-sm font-medium leading-[17px] mt-4">WELCOME BACK</h4>
                 <h2 className=" text-lg leading-[22px] font-medium text-white text-center mt-3">Log into your account</h2>
@@ -42,7 +42,7 @@ export default function LoginModal({preventClose = false, backdrop = true, stati
                     <p className="block text-sm leading-[17px] text-primary-200 font-normal w-full">Not registered yet? <span className='text-primary-100 cursor-pointer' onClick={() => { redirectModel() } }> Register →</span> </p>
                 </form>
             </div>
-            <div className={`backdrop-blur-[2px] top-0 h-full w-full z-20 bg-opacity-50 bg-black absolute ${backdrop ? '': 'hidden'} ${show ? 'block': 'hidden'}`}></div>
+            <div className={`backdrop-blur-[2px] top-0 h-full w-full z-20 bg-opacity-50 bg-black fixed ${backdrop ? '': 'hidden'} ${show ? 'block': 'hidden'}`}></div>
         </>
 
     )

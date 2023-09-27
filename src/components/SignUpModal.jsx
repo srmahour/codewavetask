@@ -8,7 +8,7 @@ export default function SignUpModal({preventClose = false, backdrop = true, stat
     const curentParams = useLocation();
 
     const redirectModel = () => {
-        console.log(curentParams.pathname)
+        
         if(curentParams.pathname !== '/post'){
             return navigate("/");
         }
@@ -18,7 +18,7 @@ export default function SignUpModal({preventClose = false, backdrop = true, stat
     
     return(
         <>
-            <div className={`max-w-[463px] w-fill h-[506px] bottom-0 left-0 top-0 right-0 m-auto z-30 card-bg rounded-lg p-6 border-2 border-solid border-transparent ${staticModal && staticModal == true ? 'relative' : 'absolute'} ${show ? 'block': 'hidden'}`}>
+            <div className={`max-w-[463px] animate-fadeIn w-fill h-[506px] bottom-0 left-0 top-0 right-0 m-auto z-30 card-bg rounded-lg p-6 border-2 border-solid border-transparent ${staticModal && staticModal == true ? 'relative' : 'fixed'} ${show ? 'block': 'hidden'}`}>
                 <button type="button" onClick={signUpAction} className={`right-5 top-7 absolute h-8 w-8 bg-primary-700 rounded-full ${preventClose && preventClose == true ? 'hidden' : ''} `}> <span className="h-3 w-[1.25px] bg-white block absolute top-0 bottom-0 left-0 right-0 m-auto -rotate-45"></span> <span className="h-3 w-[1.25px] bg-white block absolute top-0 bottom-0 left-0 right-0 m-auto rotate-45"></span></button>
                 <h4 className=" text-primary-300 uppercase text-center text-sm font-medium leading-[17px] mt-4">SIGN UP</h4>
                 <h2 className=" text-lg leading-[22px] font-medium text-white text-center mt-3">Create an account to continue</h2>
@@ -40,7 +40,7 @@ export default function SignUpModal({preventClose = false, backdrop = true, stat
                     <p className="block text-sm leading-[17px] text-primary-200 font-normal w-full">Already have an account? <span className='text-primary-100 cursor-pointer' onClick={() => { redirectModel() }}> Login →</span> </p>
                 </form>
             </div>
-            <div className={`backdrop-blur-[2px] top-0 h-full w-full z-20 bg-opacity-50 bg-black absolute ${backdrop && backdrop == true ? '': 'hidden'} ${show ? 'block': 'hidden'} `}></div>
+            <div className={`backdrop-blur-[2px] top-0 h-full w-full z-20 bg-opacity-50 bg-black fixed ${backdrop && backdrop == true ? '': 'hidden'} ${show ? 'block': 'hidden'} `}></div>
         </>
 
     )
